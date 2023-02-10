@@ -1,6 +1,8 @@
 # Spotify-Playlist-Downloader
 Program that makes use of the Spotify and YouTube Data API to download spotify playlists from YouTube MP3s.
 
+NOTE: searches.txt file already contains song tiltes for testing, run the get spotify titles script first to generate your own.
+
 Files:
 get_spotify_titles.py:
 Using the Spotify API, we input the playlist ID for any playlist (which can be found in the URL for the playlist) into the get_track_id() function.
