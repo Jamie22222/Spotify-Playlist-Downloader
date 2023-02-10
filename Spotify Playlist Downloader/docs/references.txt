@@ -1,0 +1,7 @@
+YouTube search API: https://medium.com/daily-python/python-script-to-search-content-using-youtube-data-api-daily-python-8-1084776a6578
+
+Python Requests Library: https://realpython.com/python-requests/
+
+Download Youtube Links python: https://www.geeksforgeeks.org/pytube-python-library-download-youtube-videos/
+
+YouTube API Documentation: https://developers.google.com/youtube/v3/docs/search/list
