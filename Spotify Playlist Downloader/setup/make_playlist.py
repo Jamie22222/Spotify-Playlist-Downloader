@@ -1,5 +1,7 @@
 """Download Spotify Playlist From YouTube
 
+NOTE: API key can be found on the YouTube Data API page (found in docs/references.txt)
+
 The following script uses the 'searches.txt' file generated in 'get_spotify_titles'
 and sends each line as a request to YouTube's search engine via the YouTube Data API.
 The request returns a JSON file of all the metadata from the YouTube video, including the 
@@ -28,8 +30,8 @@ import pytube
 from pprint import PrettyPrinter
 
 url = 'https://www.youtube.com'  # establish connection to youtube
-API_KEY = 'AIzaSyBIHv0-Il2Wb59kaC8QiiGg9j8w89L1yQA'  # key for accessing youtubes developer API
-SAVE_PATH = "C:\\Users\\Client 2.2022 SSD\\Downloads"  # path that the songs will download to
+API_KEY = input('Enter API key: ')  # key for accessing youtubes developer API
+SAVE_PATH = input("Enter save path for playlist: ")  # path that the songs will download to
 titles = []  # list of titles to search for
 links = []  # list of links to download
 
