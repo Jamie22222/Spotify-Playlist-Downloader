@@ -1,5 +1,7 @@
 """Get Song Titles From Spotify Playlist
 
+NOTE: Client ID and Client Secret can be found on the Spotify Developer page. Link is in docs/references.txt(Spotify account needed)
+
 The following script uses the Spotify API to access song data from any playlist,
 and dump the song titles and artist name in a text file to use as search requests in the
 YouTube data API. The ID for any playlist can be found at the end of the URL for the playlist.
@@ -18,8 +20,8 @@ import time
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-client_id = 'c868d9b22a224b50a836141a713834c0'  # user id for spotify developer account
-client_secret = 'f82b3b8855ad424a90ff6c49aa2ee4fb'  # private key for API access
+client_id = input('Enter Spotify Client ID: ')  # user id for spotify developer account
+client_secret = input('Enter Spotify Client Secret: ')  # private key for API access
 client_credentials_manager = SpotifyClientCredentials(client_id, client_secret)  # send credentials to the server
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)  # sp will be the spotify API client
 country_code = 'IE'  # needed for metadata 
@@ -47,7 +49,7 @@ def get_track_data(track_id):
 
 def main():
     tracks = []  # to be filled with song title and artist name from get_track_data
-    playlist_id = '4uxJSO6cN6i0HFD4FkDl9R'  # TODO: make playlist_id an input variable after testing
+    playlist_id = input('Enter playlist ID: ')  # playlist ID can be found in the playlists' URL
     track_id = get_track_id(playlist_id)
     for i in range(len(track_id)):
         time.sleep(.5)  # so as not to overload the server
